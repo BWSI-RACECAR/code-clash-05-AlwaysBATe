@@ -110,13 +110,14 @@ class Solution:
     def encrypt(self, message):
         #type message: string
         #return type: string
-        string = ' '
+        string = ""
+        message = message.upper()
         for i in message:
-            if i != ' ':
-                string += ' '
+            if i == " ":
+                string = string+" "
             else:
-                string += MORSE_CODE_DICT[i]
-                string += ' '            #TODO: Write code below to return a string with the solution to the prompt.
+                string = string+MORSE_CODE_DICT[i]
+                string = string+" "            #TODO: Write code below to return a string with the solution to the prompt.
         return string
 
 def main():
